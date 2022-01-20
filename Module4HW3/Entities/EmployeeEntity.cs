@@ -19,5 +19,7 @@ namespace Module4HW3.Entities
 
         public int TitleId { get; set; }
         public TitleEntity Title { get; set; }
+
+        public List<EmployeeProjectEntity> EmployeeProjects { get; set; } = new List<EmployeeProjectEntity>();
     }
 }

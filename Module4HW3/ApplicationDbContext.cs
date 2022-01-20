@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Module4HW3.Configurations;
 using Module4HW3.Entities;
 using Module4HW3.EntityConfigurations;
 
@@ -25,14 +24,13 @@ namespace Module4HW3
         public DbSet<TitleEntity> Title { get; set; }
 
         public DbSet<ProjectEntity> Projects { get; set; }
-
         public DbSet<EmployeeProjectEntity> EmployeeProjects { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             modelBuilder.ApplyConfiguration(new OfficeConfiguration());
             modelBuilder.ApplyConfiguration(new TitleConfiguration());
+
             modelBuilder.ApplyConfiguration(new ProjectConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeProjectConfiguration());
         }

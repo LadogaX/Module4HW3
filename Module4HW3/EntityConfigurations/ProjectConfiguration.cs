@@ -16,7 +16,7 @@ namespace Module4HW3.EntityConfigurations
             entityTypeBuilder.ToTable("Project").HasKey(t => t.ProjectId);
             entityTypeBuilder.Property(t => t.ProjectId).HasColumnName("ProjectId").ValueGeneratedOnAdd();
             entityTypeBuilder.Property(t => t.Name).IsRequired().HasColumnName("Name").HasMaxLength(50);
-            entityTypeBuilder.Property(t => t.Budget).IsRequired().HasColumnName("Budget").HasColumnType("double");
+            entityTypeBuilder.Property(t => t.Budget).IsRequired().HasColumnName("Budget").HasColumnType("money");
             entityTypeBuilder.Property(t => t.StartedDate).IsRequired().HasColumnName("StartedDate").HasColumnType("datetime2(7)");
         }
     }

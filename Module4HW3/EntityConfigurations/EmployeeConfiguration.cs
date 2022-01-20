@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Module4HW3.Entities;
 
-namespace Module4HW3.Configurations
+namespace Module4HW3.EntityConfigurations
 {
     public class EmployeeConfiguration : IEntityTypeConfiguration<EmployeeEntity>
     {

@@ -10,7 +10,7 @@ namespace Module4HW3.Entities
     {
         public int ProjectId { get; set; }
         public string Name { get; set; }
-        public double Budget { get; set; }
+        public decimal Budget { get; set; }
         public DateTime StartedDate { get; set; }
 
         public List<EmployeeProjectEntity> EmployeeProjects { get; set; } = new List<EmployeeProjectEntity>();
