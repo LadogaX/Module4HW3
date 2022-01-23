@@ -25,9 +25,9 @@ namespace Module4HW3.EntityConfigurations
                              .HasForeignKey(e => e.ProjectId)
                              .OnDelete(DeleteBehavior.Cascade);
 
-            entityTypeBuilder.HasOne(e => e.Projects)
+            entityTypeBuilder.HasOne(e => e.Employees)
                              .WithMany(o => o.EmployeeProjects)
-                             .HasForeignKey(e => e.ProjectId)
+                             .HasForeignKey(e => e.EmployeeId)
                              .OnDelete(DeleteBehavior.Cascade);
         }
     }
